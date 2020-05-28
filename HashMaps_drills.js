@@ -2,7 +2,7 @@
 const HashMap = require('./HashMap');
 //1. Create a HashMap class
 function main() {
-  let LotR = new HashMap;
+  const LotR = new HashMap;
   LotR.MAX_LOAD_RATIO = 0.5;
   LotR.SIZE_RATIO = 3;
 
@@ -24,14 +24,15 @@ console.log(main());
 
 console.log('Maiar is', main().get('Maiar'));
 console.log('Hobbit is', main().get('Hobbit'));
-//These return Sauron and Frodo respectively because...
-//EXPLAIN
+//These return Sauron and Frodo respectively because we a inserting the same key again with a different value.
+//This will override the first value, so we do not see Bilbo or The Necromancer in the table.
 
-//The capacity of the hash table after hasing all the items is...
-//EXPLAIN
+//The capacity of the hash table after hasing all the items is 8.
+//The hash table has a length of 9 so the final key, Ent, is undefined.
 
 //2. WhatDoesThisDo
-//Answer: 
+//Answer: This function creates two hash maps.  In each map the same key ('Hello World.') is inserted with two
+//  different values.  In each case the second value will override the first.
 //DO NOT run code prior to attempting to solve the problem
 const WhatDoesThisDo = function(){
   let str1 = 'Hello World.';
