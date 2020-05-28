@@ -20,10 +20,10 @@ function main() {
 
   return LotR;
 }
-console.log(main());
+//console.log(main());
 
-console.log('Maiar is', main().get('Maiar'));
-console.log('Hobbit is', main().get('Hobbit'));
+//console.log('Maiar is', main().get('Maiar'));
+//console.log('Hobbit is', main().get('Hobbit'));
 //These return Sauron and Frodo respectively because we a inserting the same key again with a different value.
 //This will override the first value, so we do not see Bilbo or The Necromancer in the table.
 
@@ -51,9 +51,21 @@ const WhatDoesThisDo = function(){
 };
 
 //3. Demonstrate understanding of Hash Maps
-//use drawing tool
+//Draw.io (https://drive.google.com/file/d/1YYdVcJbMoTNiAOfcldDSl64Qm5FlnnOQ/view?usp=sharing)
 
 //4. Remove duplicates
+function removeDuplicates(str) {
+  const singleton = new Map();
+  let result = '';
+  for(let i = 0; i < str.length; i ++) {
+    if(!singleton.has(str[i])) {
+      singleton.set(str[i]);
+      result += str[i];
+    }
+  }
+  return result;
+}
+//console.log(removeDuplicates('google all that you think can think of'));
 
 //5. Any permutation a palindrome
 
