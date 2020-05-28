@@ -1,6 +1,34 @@
 'use strict';
 const HashMap = require('./HashMap');
 //1. Create a HashMap class
+function main() {
+  let LotR = new HashMap;
+  LotR.MAX_LOAD_RATIO = 0.5;
+  LotR.SIZE_RATIO = 3;
+
+  LotR.set('Hobbit', 'Bilbo');
+  LotR.set('Hobbit', 'Frodo');
+  LotR.set('Wizard', 'Gandalf');
+  LotR.set('Human', 'Aragorn');
+  LotR.set('Elf', 'Legolas');
+  LotR.set('Maiar', 'The Necromancer');
+  LotR.set('Maiar', 'Sauron');
+  LotR.set('RingBearer', 'Gollum');
+  LotR.set('LadyOfLight', 'Galadriel');
+  LotR.set('HalfElven', 'Arwen');
+  LotR.set('Ent', 'Treebeard');
+
+  return LotR;
+}
+console.log(main());
+
+console.log('Maiar is', main().get('Maiar'));
+console.log('Hobbit is', main().get('Hobbit'));
+//These return Sauron and Frodo respectively because...
+//EXPLAIN
+
+//The capacity of the hash table after hasing all the items is...
+//EXPLAIN
 
 //2. WhatDoesThisDo
 //Answer: 
